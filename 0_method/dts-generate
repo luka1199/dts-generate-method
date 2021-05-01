@@ -15,7 +15,6 @@ $ROOT_PATH/3_extract-readme/extractReadme.sh $NPM_REPOSITORY $README_FILE
 
 # Extract code
 OUTPUT_EXTRACTED_CODE=$SCRIPT_PATH/output-extracted-code
-echo $OUTPUT_EXTRACTED_CODE
 rm -rf $OUTPUT_EXTRACTED_CODE
 mkdir $OUTPUT_EXTRACTED_CODE
 $ROOT_PATH/4_extract-code/extractCodeFromReadme.sh $README_FILE $MODULE $OUTPUT_EXTRACTED_CODE
