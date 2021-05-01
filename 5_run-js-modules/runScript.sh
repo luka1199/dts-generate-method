@@ -11,7 +11,10 @@ echo $JS_FILE_DIRECTORY
 
 npm --prefix $JS_FILE_DIRECTORY install $MODULE_NAME
 
-gtimeout 10 node $JS_FILE
+case "$OSTYPE" in
+  darwin*) gtimeout 10 node $JS_FILE ;;
+  *)       timeout 10 node $JS_FILE ;;
+esac
 
 ERROR_CODE=$?
 
